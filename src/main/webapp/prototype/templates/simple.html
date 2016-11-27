@@ -1,0 +1,9 @@
+{{= it.include("html-head", {"bodyClass": it.document.bodyClass, "pageTitle": it.document.pageTitle}) }}
+
+<div id="container">
+  <div id="content">
+    {{= it.document }}
+  </div>
+</div>
+
+{{= it.include("html-end") }}

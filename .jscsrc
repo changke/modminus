@@ -1,0 +1,6 @@
+{
+  "preset": "google",
+  "requireDotNotation": false,
+  "maximumLineLength": 160,
+  "requireCapitalizedConstructors": false
+}

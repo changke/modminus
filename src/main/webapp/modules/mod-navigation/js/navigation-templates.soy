@@ -1,0 +1,34 @@
+{namespace mm.templates.navigation}
+
+/**
+ * Navigation list
+ * @param navList
+ */
+{template .renderNavList}
+  <ul>
+  {foreach $navItem in $navList}
+    {call .renderNavItem}
+      {param headline: $navItem['headline'] /}
+      {param link: $navItem['link'] /}
+      {param navList: $navItem['navList'] /}
+    {/call}
+  {/foreach}
+  </ul>
+{/template}
+
+/**
+ * Navigation item
+ * @param headline
+ * @param link
+ * @param navList
+ */
+{template .renderNavItem}
+  <li>
+    <a href="{$link}">{$headline}</a>
+    {if isNonnull($navList)}
+      {call .renderNavList}
+        {param navList: $navList /}
+      {/call}
+    {/if}
+  </li>
+{/template}

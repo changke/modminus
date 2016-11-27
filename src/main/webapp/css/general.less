@@ -1,0 +1,26 @@
+html {
+  font-size: 10px; // 1rem = 10px
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+}
+
+#container {
+}
+
+#content {
+  margin: 0 auto; // centering
+  max-width: @mobile-content-max-width;
+
+  @media @tablet {
+    max-width: inherit;
+    width: @tablet-content-width;
+  }
+
+  @media @desktop {
+    width: @desktop-content-width;
+  }
+}

@@ -1,0 +1,41 @@
+<script>
+  try {
+    // remove "no-js" class
+    window.document.documentElement.classList.remove('no-js');
+
+    // progressive enhancement
+    if (!('querySelector' in document && 'addEventListener' in window && 'getComputedStyle' in window)) {
+      window.IS_LOSER = true;
+    } else {
+      window.document.documentElement.classList.add('enhanced');
+    }
+  } catch (e) {}
+
+  // CSS/JS loader
+  // https://developer.mozilla.org/en/docs/Web/API/HTMLScriptElement
+  var loadJS = (function (head) {
+    function loadError (err) {
+      throw new URIError('The file ' + err.target.src + ' is not accessible.');
+    }
+
+    return function (src, onload, isCSS) {
+      var r;
+      if (isCSS) {
+        r = document.createElement('link');
+        r.rel = 'stylesheet';
+        r.type = 'text/css';
+      } else {
+        r = document.createElement('script');
+        r.type = 'text/javascript';
+      }
+      r.onerror = loadError;
+      if (onload) { r.onload = onload; }
+      head.appendChild(r);
+      if (isCSS) {
+        r.href = src;
+      } else {
+        r.src = src;
+      }
+    }
+  })(document.head || document.getElementsByTagName('head')[0]);
+</script>

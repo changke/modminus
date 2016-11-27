@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#00368b" />
+
+  <title>{{= it.pageTitle || 'modminus Demo' }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16" />
+
+  <!-- Initial JS -->
+  {{= it.include("head-script") }}
+
+  <!-- Webfonts -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' />
+  {{? it.green }}
+  <link id="lnkStylesheet" rel="stylesheet" type="text/css" href="/assets/styles.green.min.css" />
+  {{??}}
+  <link id="lnkStylesheet" rel="stylesheet" type="text/css" href="/assets/styles.blue.min.css" />
+  {{?}}
+
+  <!-- More JS -->
+  <script src="/assets/picturefill.min.js" async></script>
+</head>
+<body class="{{= it.bodyClass || '' }}">

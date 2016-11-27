@@ -1,0 +1,42 @@
+{
+  "data": {
+    "navList": [
+      {
+        "headline": "Google",
+        "link": "https://www.google.com/",
+        "navList": [
+          {
+            "headline": "Gmail",
+            "link": "https://mail.google.com"
+          },
+          {
+            "headline": "Google+",
+            "link": "https://plus.google.com"
+          },
+          {
+            "headline": "YouTube",
+            "link": "https://www.youtube.com"
+          }
+        ]
+      },
+      {
+        "headline": "Facebook",
+        "link": "https://www.facebook.com",
+        "navList": [
+          {
+            "headline": "Instagram",
+            "link": "https://www.instagram.com"
+          },
+          {
+            "headline": "WhatsApp",
+            "link": "https://www.whatsapp.com"
+          }
+        ]
+      },
+      {
+        "headline": "Twitter",
+        "link": "https://twitter.com"
+      }
+    ]
+  }
+}

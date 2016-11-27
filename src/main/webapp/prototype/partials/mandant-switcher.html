@@ -1,0 +1,25 @@
+<div id="switcher" style="position:fixed;z-index:99;right:10px;bottom:10px;background-color:rgba(255,255,255,0.4);border:1px solid #000;padding:10px;font-size:12px;">
+  <dl>
+    <dt>Brands</dt>
+    <dd><a href="#" data-brand="blue">Blue</a></dd>
+    <dd><a href="#" data-brand="green">Green</a></dd>
+  </dl>
+</div>
+<script>
+  (function() {
+    if (document.querySelectorAll) {
+      var as = document.querySelectorAll('#switcher dd > a');
+      var switchStylesheet = function(brandName) {
+        document.getElementById('lnkStylesheet').setAttribute('href', '/assets/styles.' + brandName + '.min.css');
+      };
+      for (var i = 0, len = as.length; i < len; i++) {
+        as[i].addEventListener('click', function(e) {
+          e.preventDefault();
+          var m = this.getAttribute('data-brand');
+          switchStylesheet(m);
+          return false;
+        });
+      }
+    }
+  })();
+</script>
