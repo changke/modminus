@@ -1,12 +1,25 @@
 <div class="mod mod-navigation">
-  <nav class="nav">
+  <nav class="nav {{= it.class }}">
     <ul>
-      <li class="nav__item"><a href="#">News</a></li>
+      <li class="nav__item">
+        <a href="#">News</a>
+        <ul>
+          <li class="nav__item"><a href="#">News 1</a></li>
+          <li class="nav__item"><a href="#">News 2</a></li>
+          <li class="nav__item"><a href="#">News 3</a></li>
+        </ul>
+      </li>
       <li class="nav__item"><a href="#">Sports</a></li>
-      <li class="nav__item"><a href="#">Technology</a></li>
+      <li class="nav__item">
+        <a href="#">Technology</a>
+        <ul>
+          <li class="nav__item"><a href="#">Tech 1</a></li>
+          <li class="nav__item"><a href="#">Tech 2</a></li>
+          <li class="nav__item"><a href="#">Tech 3</a></li>
+        </ul>
+      </li>
       <li class="nav__item"><a href="#">About</a></li>
       <li class="nav__item"><a href="#">Chanel V</a></li>
     </ul>
   </nav>
-  <nav id="nested" class="nav"></nav>
 </div>

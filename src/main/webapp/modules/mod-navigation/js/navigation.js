@@ -29,7 +29,7 @@ mm.modules.navigation.prototype.run = function() {
 
 mm.modules.navigation.prototype.renderNav = function(navData) {
   try {
-    this.ctx.find('#nested').append(G(mm.templates.navigation.renderNavList({
+    this.ctx.find('.nav').empty().append(G(mm.templates.navigation.renderNavList({
       navList: navData['navList']
     }).content));
   } catch (e) {

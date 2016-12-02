@@ -1,3 +1,63 @@
 .mod-navigation {
-  
+
+}
+
+.nav {
+  padding: @gap (@gap * 2);
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul ul {
+    padding-left: (@gap * 2);
+  }
+
+  &__item {
+    list-style: none;
+    font-weight: bold;
+
+    a {
+      font-size: 1.4rem;
+      line-height: 3.4rem;
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  &__item &__item {
+    font-weight: normal;
+  }
+
+  @media @tablet {
+    > ul {
+      display: flex;
+    }
+
+    ul ul {
+      padding: 0;
+    }
+
+    &__item {
+      flex: 1;
+    }
+  }
+
+  // modifiers
+  &_top { // nav in header
+    background: @medium-blue;
+
+    a {
+      color: @white;
+    }
+  }
+
+  &_bottom { // nav in footer
+    background: @light-gray;
+
+    a {
+      color: @dark-gray;
+    }
+  }
 }

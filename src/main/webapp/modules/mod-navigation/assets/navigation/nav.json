@@ -3,7 +3,7 @@
     "navList": [
       {
         "headline": "Google",
-        "link": "https://www.google.com/",
+        "link": "https://www.google.com",
         "navList": [
           {
             "headline": "Gmail",
@@ -36,6 +36,32 @@
       {
         "headline": "Twitter",
         "link": "https://twitter.com"
+      },
+      {
+        "headline": "Amazon",
+        "link": "https://www.amazon.com"
+      },
+      {
+        "headline": "Microsoft",
+        "link": "https://www.microsoft.com",
+        "navList": [
+          {
+            "headline": "Windows",
+            "link": "#"
+          },
+          {
+            "headline": "Office",
+            "link": "#"
+          },
+          {
+            "headline": "Visual Studio",
+            "link": "#"
+          },
+          {
+            "headline": "Hotmail",
+            "link": "#"
+          }
+        ]
       }
     ]
   }

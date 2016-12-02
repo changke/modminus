@@ -23,7 +23,7 @@
  * @param navList
  */
 {template .renderNavItem}
-  <li>
+  <li class="nav__item">
     <a href="{$link}">{$headline}</a>
     {if isNonnull($navList)}
       {call .renderNavList}
