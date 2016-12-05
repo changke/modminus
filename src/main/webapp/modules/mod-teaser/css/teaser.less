@@ -1,3 +1,23 @@
-.mod-teaser {
-  
+.mod-teaser {}
+
+.teaser {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__image {
+    width: 12rem;
+    height: 12rem;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    height: 12rem;
+    overflow: hidden;
+  }
 }
