@@ -1,6 +1,17 @@
 .mod-teaser {}
 
 .teaser {
+  background-color: @white;
+
+  a {
+    text-decoration: none;
+    color: @dark-gray;
+  }
+
+  &:hover {
+    background-color: @light-gray;
+  }
+
   &__wrapper {
     display: flex;
   }
@@ -8,6 +19,7 @@
   &__image {
     width: 12rem;
     height: 12rem;
+    overflow: hidden;
 
     img {
       height: 100%;
@@ -19,5 +31,54 @@
     flex: 1;
     height: 12rem;
     overflow: hidden;
+    padding: 0 0 0 @gap;
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 0 0 0.8rem; // total height 2rem
+    color: @medium-gray;
+  }
+
+  &__headline {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__desc {
+    display: none;
+  }
+
+  @media @tablet {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__image {
+      width: auto;
+      height: auto;
+      overflow: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      padding: @gap 0;
+      height: auto;
+    }
+
+    &__desc {
+      display: block;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      margin: 0;
+    }
   }
 }
