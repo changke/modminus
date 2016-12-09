@@ -1,0 +1,35 @@
+// Button
+// <elem class="button button-modifier"><span class="button__text">Button Text</span></elem>
+.button {
+  display: inline-block;
+  padding: @gap (@gap * 2);
+  background-color: @medium-blue;
+  border: 1px solid @medium-blue;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+  font-family: @sans-serif-fonts;
+  text-align: center;
+
+  &__text {
+    display: inline-block;
+    color: @white;
+  }
+}
+
+// Textbox
+.textbox {
+  display: inline-block;
+  padding: @gap;
+  background-color: @light-gray;
+  border: 1px solid @medium-blue;
+  font-family: @sans-serif-fonts;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: @dark-gray;
+
+  &_multiline {
+    line-height: 2rem;
+  }
+}
