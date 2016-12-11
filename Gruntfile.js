@@ -220,12 +220,6 @@ module.exports = function(grunt) {
       }
     },
 
-    exec: {
-      plovr: {
-        cmd: 'java -jar plovr.jar build plovr-config.json'
-      }
-    },
-
     plovr_modules: {
       options: {
         id: 'mm-modules',
@@ -351,7 +345,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-less-imports');
