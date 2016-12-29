@@ -1,5 +1,7 @@
+// 1. Form controls
+
 // Button
-// <elem class="button button-modifier"><span class="button__text">Button Text</span></elem>
+// <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
 .button {
   display: inline-block;
   padding: @gap (@gap * 2);
@@ -18,11 +20,12 @@
   }
 
   &_disabled {
-    color: @medium-gray;
+    color: #ccc;
   }
 }
 
-// Textbox
+// Text input
+// <input class="textbox" type="text" ... />
 .textbox {
   display: inline-block;
   padding: @gap;
@@ -37,3 +40,5 @@
     line-height: 2rem;
   }
 }
+
+// Radio
