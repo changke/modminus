@@ -1,7 +1,12 @@
 // 1. Form controls
+// (Row-)Container
+.form-ctrl {
+  display: flex;
+  align-items: center;
+}
 
 // Button
-// <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
+// e.g.: <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
 .button {
   display: inline-block;
   padding: @gap (@gap * 2);
@@ -25,15 +30,15 @@
 }
 
 // Text input
-// <input class="textbox" type="text" ... />
+// e.g.: <input class="textbox" type="text" ... />
 .textbox {
   display: inline-block;
-  padding: @gap;
+  padding: (@gap / 2) @gap;
   background-color: @light-gray;
   border: 1px solid @medium-blue;
   font-family: @sans-serif-fonts;
   font-size: 1.2rem;
-  line-height: 1.4rem;
+  line-height: 2.4rem;
   color: @dark-gray;
 
   &_multiline {
@@ -41,4 +46,42 @@
   }
 }
 
-// Radio
+// Radio & checkbox (with label)
+// e.g.: <input type="checkbox" class="checkbox" id="x" ... /><label for="x" class="label label_after">Label</label>
+.radio,
+.checkbox {
+  // no special styles for now
+}
+
+.label {
+  flex: 1;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: @dark-gray;
+
+  &_before {
+    text-align: right;
+    padding-right: (@gap / 2);
+  }
+
+  &_after {
+    text-align: left;
+    padding-left: (@gap / 2);
+  }
+}
+
+// Select
+.select {
+  display: inline-block;
+  padding: (@gap / 2);
+  font-family: @sans-serif-fonts;
+  font-size: 1.2rem;
+  line-height: 1;
+
+  optgroup,
+  option {
+    font-family: @sans-serif-fonts;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+}
