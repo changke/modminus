@@ -1,8 +1,19 @@
 // 1. Form controls
 // (Row-)Container
-.form-ctrl {
+.form-row {
   display: flex;
   align-items: center;
+
+  &__label {
+    flex: 1;
+    box-sizing: border-box;
+    max-width: 40%;
+    color: @dark-gray;
+  }
+
+  &__input {
+    flex: 1;
+  }
 }
 
 // Button
@@ -54,10 +65,8 @@
 }
 
 .label {
-  flex: 1;
   font-size: 1.4rem;
   line-height: 2rem;
-  color: @dark-gray;
 
   &_before {
     text-align: right;
