@@ -1,5 +1,5 @@
 // 1. Form controls
-// (Row-)Container
+// Form container
 .formbox {
   &__row {
     margin: 0 0 @gap;
@@ -11,7 +11,8 @@
   }
 }
 
-.formrow {
+// label and form control / container pair -> nestable
+.labeled {
   display: flex;
   align-items: center;
 
@@ -59,7 +60,7 @@
 .textbox {
   display: inline-block;
   padding: (@gap / 2) @gap;
-  background-color: @light-gray;
+  background-color: @white;
   border: 1px solid @medium-blue;
   font-family: @sans-serif-fonts;
   font-size: 1.2rem;
@@ -78,6 +79,7 @@
   // no special styles for now
 }
 
+// Label
 .label {
   font-size: 1.4rem;
   line-height: 2rem;

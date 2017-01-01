@@ -55,19 +55,37 @@
 
 <fieldset>
   <legend>More Form Controls</legend>
-  <div class="formrow">
+  <div class="labeled">
     <input type="checkbox" id="chkDemo" class="checkbox" />
-    <label for="chkDemo" class="label formrow__label label_after">Checkbox</label>
+    <label for="chkDemo" class="label labeled__label label_after">Checkbox</label>
   </div>
 
-  <div class="formrow">
+  <div class="labeled">
     <input type="radio" id="rdoDemo" class="radio" />
-    <label for="rdoDemo" class="label formrow__label label_after">Radio Button</label>
+    <label for="rdoDemo" class="label labeled__label label_after">Radio Button</label>
   </div>
 
-  <div class="formrow">
-    <label for="txtDemo" class="label formrow__label label_before">Input with Label:</label>
-    <input type="text" class="textbox formrow__input" id="txtDemo" size="16" placeholder="Type something..." />
+  <div class="labeled">
+    <label for="txtDemo" class="label labeled__label label_before">Input with Label:</label>
+    <input type="text" class="textbox labeled__input" id="txtDemo" size="16" placeholder="Type something..." />
+  </div>
+
+  <div class="labeled">
+    <label class="label labeled__label label_before">Select an answer:</label>
+    <div class="labeled__input">
+      <div class="labeled">
+        <input type="radio" id="rdoA" class="radio" name="answer" checked="checked" />
+        <label for="rdoA" class="label labeled__label label_after">Answer A</label>
+      </div>
+      <div class="labeled">
+        <input type="radio" id="rdoB" class="radio" name="answer" />
+        <label for="rdoB" class="label labeled__label label_after">Answer B</label>
+      </div>
+      <div class="labeled">
+        <input type="radio" id="rdoC" class="radio" name="answer" />
+        <label for="rdoC" class="label labeled__label label_after">Answer C</label>
+      </div>
+    </div>
   </div>
 
   <select class="select" title="Select">
