@@ -1,5 +1,6 @@
-// 1. Form controls
+//// 1. Form controls
 // Form container
+// Set (bottom-)margins of rows
 .formbox {
   &__row {
     margin: 0 0 @gap;
@@ -11,7 +12,9 @@
   }
 }
 
-// label and form control / container pair -> nestable
+// Label with a control (or container -> nestable)
+// width label : control = 1:2
+// basically a "row" in a form
 .labeled {
   display: flex;
   align-items: center;
@@ -32,6 +35,7 @@
 }
 
 // Button
+// default height: 36px
 // e.g.: <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
 .button {
   display: inline-block;
@@ -56,6 +60,7 @@
 }
 
 // Text input
+// default height 36px
 // e.g.: <input class="textbox" type="text" ... />
 .textbox {
   display: inline-block;
@@ -64,9 +69,10 @@
   border: 1px solid @medium-blue;
   font-family: @sans-serif-fonts;
   font-size: 1.2rem;
-  line-height: 2.4rem;
+  line-height: 2.4rem; // to get 36px height
   color: @dark-gray;
 
+  // for <textarea>
   &_multiline {
     line-height: 2rem;
   }
@@ -108,5 +114,21 @@
     font-family: @sans-serif-fonts;
     font-size: 1.2rem;
     line-height: 1;
+  }
+}
+
+//// 2. Table
+.table {
+  width: 100%;
+  border: 0;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding: (@gap / 2) @gap;
+    border-bottom: 1px solid @light-gray;
   }
 }
