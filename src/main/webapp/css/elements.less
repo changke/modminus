@@ -17,10 +17,11 @@
 // basically a "row" in a form
 .labeled {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 
-  &_atop {
-    align-items: flex-start;
+  &_sxs {
+    flex-direction: row;
+    align-items: center;
   }
 
   &__label {
@@ -30,7 +31,7 @@
   }
 
   &__input {
-    flex: 2;
+    flex: 1;
   }
 }
 
@@ -39,13 +40,13 @@
 // e.g.: <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
 .button {
   display: inline-block;
-  padding: @gap (@gap * 2);
+  padding: (@gap / 2) (@gap * 2);
   background-color: @medium-blue;
   color: @white;
   border: 1px solid @medium-blue;
   cursor: pointer;
   font-size: 1.4rem;
-  line-height: 1.4rem;
+  line-height: 2.4rem;
   font-weight: bold;
   font-family: @sans-serif-fonts;
   text-align: center;
@@ -68,29 +69,25 @@
   background-color: @white;
   border: 1px solid @medium-blue;
   font-family: @sans-serif-fonts;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 2.4rem; // to get 36px height
   color: @dark-gray;
 
   // for <textarea>
-  &_multiline {
-    line-height: 2rem;
-  }
+  &_multiline {}
 }
 
 // Radio & checkbox (with label)
 // e.g.: <input type="checkbox" class="checkbox" id="x" ... /><label for="x" class="label label_after">Label</label>
 .radio,
-.checkbox {
-  // no special styles for now
-}
+.checkbox {}
 
 // Label
 .label {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
 
-  &_before {
+  &_sxs_before {
     text-align: right;
     padding-right: (@gap / 2);
   }
@@ -130,5 +127,34 @@
     text-align: left;
     padding: (@gap / 2) @gap;
     border-bottom: 1px solid @light-gray;
+  }
+}
+
+@media @tablet {
+  .labeled {
+    flex-direction: row;
+    align-items: center;
+
+    &_atop {
+      align-items: flex-start;
+    }
+
+    &__label {
+      flex: 1;
+    }
+
+    &__input {
+      flex: 2;
+    }
+  }
+
+  .label {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    &_before {
+      text-align: right;
+      padding-right: (@gap / 2);
+    }
   }
 }

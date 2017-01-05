@@ -21,23 +21,29 @@
     background-color: #999;
     color: #fff;
   }
+
+  .sg .row__col .demo {
+    margin-bottom: 0;
+    background-color: #ededed;
+  }
 </style>
 
-<h1>List of Elements</h1>
+<h1>Elements (Style Guide)</h1>
 
 <fieldset>
-  <legend>Header (with Navigation)</legend>
-  {{= it.include("mod-header") }}
-</fieldset>
-
-<fieldset>
-  <legend>Footer</legend>
-  {{= it.include("mod-footer") }}
-</fieldset>
-
-<fieldset>
-  <legend>Teaser</legend>
-  {{= it.include("mod-teaser") }}
+  <legend>Grid</legend>
+  <div class="row">
+    <div class="row__col row__col_50"><p class="demo">1/2</p></div>
+    <div class="row__col row__col_50"><p class="demo">1/2</p></div>
+  </div>
+  <div class="row">
+    <div class="row__col row__col_66"><p class="demo">2/3</p></div>
+    <div class="row__col row__col_33"><p class="demo">1/3</p></div>
+  </div>
+  <div class="row">
+    <div class="row__col row__col_75"><p class="demo">3/4</p></div>
+    <div class="row__col row__col_25"><p class="demo">1/4</p></div>
+  </div>
 </fieldset>
 
 <fieldset>
@@ -47,20 +53,13 @@
 </fieldset>
 
 <fieldset>
-  <legend>Text Input</legend>
-  <input type="text" class="textbox" placeholder="Single line" />
-  <br />
-  <textarea class="textbox textbox_multiline" rows="5" placeholder="Multiple lines"></textarea>
-</fieldset>
-
-<fieldset>
-  <legend>More Form Controls</legend>
-  <div class="labeled">
+  <legend>Form Controls</legend>
+  <div class="labeled labeled_sxs">
     <input type="checkbox" id="chkDemo" class="checkbox" />
     <label for="chkDemo" class="label labeled__label label_after">Checkbox</label>
   </div>
 
-  <div class="labeled">
+  <div class="labeled labeled_sxs">
     <input type="radio" id="rdoDemo" class="radio" />
     <label for="rdoDemo" class="label labeled__label label_after">Radio Button</label>
   </div>
@@ -70,18 +69,18 @@
     <input type="text" class="textbox labeled__input" id="txtDemo" size="16" placeholder="Type something..." />
   </div>
 
-  <div class="labeled">
-    <label class="label labeled__label label_before">Select an answer:</label>
+  <div class="labeled labeled_sxs">
+    <label class="label labeled__label label_sxs_before">Select an answer:</label>
     <div class="labeled__input">
-      <div class="labeled">
+      <div class="labeled labeled_sxs">
         <input type="radio" id="rdoA" class="radio" name="answer" checked="checked" />
         <label for="rdoA" class="label labeled__label label_after">Answer A</label>
       </div>
-      <div class="labeled">
+      <div class="labeled labeled_sxs">
         <input type="radio" id="rdoB" class="radio" name="answer" />
         <label for="rdoB" class="label labeled__label label_after">Answer B</label>
       </div>
-      <div class="labeled">
+      <div class="labeled labeled_sxs">
         <input type="radio" id="rdoC" class="radio" name="answer" />
         <label for="rdoC" class="label labeled__label label_after">Answer C</label>
       </div>
@@ -149,4 +148,19 @@
       <td>1965-07-08</td>
     </tr>
   </table>
+</fieldset>
+
+<fieldset>
+  <legend>Header (with Navigation)</legend>
+  {{= it.include("mod-header") }}
+</fieldset>
+
+<fieldset>
+  <legend>Footer</legend>
+  {{= it.include("mod-footer") }}
+</fieldset>
+
+<fieldset>
+  <legend>Teaser</legend>
+  {{= it.include("mod-teaser") }}
 </fieldset>

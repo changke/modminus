@@ -8,19 +8,61 @@ body {
   background-color: #fff;
 }
 
-#container {
-}
+#container {}
 
 #content {
   margin: 0 auto; // centering
   max-width: @mobile-content-max-width;
+}
 
-  @media @tablet {
+// Grid
+.row {
+  padding: 0 (@gap / 2);
+
+  &__col {
+    box-sizing: border-box;
+    padding: (@gap / 2);
+  }
+}
+
+// Typography
+p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  margin: 0 0 2.4rem;
+}
+
+
+
+@media @tablet {
+  #content {
     max-width: inherit;
     width: @tablet-content-width;
   }
 
-  @media @desktop {
+  .row {
+    display: flex;
+
+    &__col {
+      &_50,
+      &_33,
+      &_25 {
+        flex: 1;
+      }
+      &_66 {
+        flex: 2;
+      }
+      &_75 {
+        flex: 3;
+      }
+    }
+  }
+}
+
+
+
+@media @desktop {
+  #content {
     width: @desktop-content-width;
   }
 }
