@@ -50,6 +50,8 @@
   <legend>Button(s)</legend>
   <button class="button"><span class="button__text">Default Button</span></button>
   <button disabled="disabled" class="button button_disabled"><span class="button__text">Disabled Button</span></button>
+  <button class="button button_small"><span class="button__text">Small Button</span></button>
+  <button class="button button_large"><span class="button__text">Large Button</span></button>
 </fieldset>
 
 <fieldset>
@@ -67,24 +69,6 @@
   <div class="labeled">
     <label for="txtDemo" class="label labeled__label label_before">Input with Label:</label>
     <input type="text" class="textbox labeled__input" id="txtDemo" size="16" placeholder="Type something..." />
-  </div>
-
-  <div class="labeled labeled_sxs">
-    <label class="label labeled__label label_sxs_before">Select an answer:</label>
-    <div class="labeled__input">
-      <div class="labeled labeled_sxs">
-        <input type="radio" id="rdoA" class="radio" name="answer" checked="checked" />
-        <label for="rdoA" class="label labeled__label label_after">Answer A</label>
-      </div>
-      <div class="labeled labeled_sxs">
-        <input type="radio" id="rdoB" class="radio" name="answer" />
-        <label for="rdoB" class="label labeled__label label_after">Answer B</label>
-      </div>
-      <div class="labeled labeled_sxs">
-        <input type="radio" id="rdoC" class="radio" name="answer" />
-        <label for="rdoC" class="label labeled__label label_after">Answer C</label>
-      </div>
-    </div>
   </div>
 
   <select class="select" title="Select">

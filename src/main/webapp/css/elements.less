@@ -12,14 +12,15 @@
   }
 }
 
-// Label with a control (or container -> nestable)
-// width label : control = 1:2
+// Label with a control
 // basically a "row" in a form
+// mobile view -> label and input stacked (excl. checkbox and radio)
 .labeled {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; // label and input stacked
 
   &_sxs {
+    // special case checkbox and radio, label at side
     flex-direction: row;
     align-items: center;
   }
@@ -56,7 +57,18 @@
   }
 
   &_disabled {
-    color: #ccc;
+    color: @medium-gray;
+  }
+
+  &_small {
+    font-size: 1rem;
+    line-height: 2rem;
+    padding: (@gap / 2) @gap;
+  }
+
+  &_large {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 }
 
@@ -87,10 +99,7 @@
   font-size: 1.2rem;
   line-height: 2.2rem;
 
-  &_sxs_before {
-    text-align: right;
-    padding-right: (@gap / 2);
-  }
+  &_before {}
 
   &_after {
     text-align: left;
@@ -130,7 +139,10 @@
   }
 }
 
+
+
 @media @tablet {
+  // label and input are placed side by side (excl. checkbox and radio) with 1:2 width ratio
   .labeled {
     flex-direction: row;
     align-items: center;
@@ -144,7 +156,7 @@
     }
 
     &__input {
-      flex: 2;
+      flex: 2; // width ratio label:input = 1:2
     }
   }
 
