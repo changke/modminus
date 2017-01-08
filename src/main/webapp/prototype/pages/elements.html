@@ -22,7 +22,7 @@
     color: #fff;
   }
 
-  .sg .row__col .demo {
+  .sg .col .demo {
     margin-bottom: 0;
     background-color: #ededed;
   }
@@ -32,17 +32,17 @@
 
 <fieldset>
   <legend>Grid</legend>
-  <div class="row">
-    <div class="row__col row__col_50"><p class="demo">1/2</p></div>
-    <div class="row__col row__col_50"><p class="demo">1/2</p></div>
+  <div class="row row_gap">
+    <div class="col col_gap col_50"><p class="demo">1/2</p></div>
+    <div class="col col_gap col_50"><p class="demo">1/2</p></div>
   </div>
-  <div class="row">
-    <div class="row__col row__col_66"><p class="demo">2/3</p></div>
-    <div class="row__col row__col_33"><p class="demo">1/3</p></div>
+  <div class="row row_gap">
+    <div class="col col_gap col_66"><p class="demo">2/3</p></div>
+    <div class="col col_gap col_33"><p class="demo">1/3</p></div>
   </div>
-  <div class="row">
-    <div class="row__col row__col_75"><p class="demo">3/4</p></div>
-    <div class="row__col row__col_25"><p class="demo">1/4</p></div>
+  <div class="row row_gap">
+    <div class="col col_gap col_75"><p class="demo">3/4</p></div>
+    <div class="col col_gap col_25"><p class="demo">1/4</p></div>
   </div>
 </fieldset>
 
@@ -56,19 +56,28 @@
 
 <fieldset>
   <legend>Form Controls</legend>
-  <div class="labeled labeled_sxs">
+  <div class="labeled">
     <input type="checkbox" id="chkDemo" class="checkbox" />
-    <label for="chkDemo" class="label labeled__label label_after">Checkbox</label>
-  </div>
-
-  <div class="labeled labeled_sxs">
-    <input type="radio" id="rdoDemo" class="radio" />
-    <label for="rdoDemo" class="label labeled__label label_after">Radio Button</label>
+    <label for="chkDemo" class="label label_after">Checkbox</label>
   </div>
 
   <div class="labeled">
-    <label for="txtDemo" class="label labeled__label label_before">Input with Label:</label>
-    <input type="text" class="textbox labeled__input" id="txtDemo" size="16" placeholder="Type something..." />
+    <input type="radio" id="rdoDemo" class="radio" />
+    <label for="rdoDemo" class="label label_after">Radio Button</label>
+  </div>
+
+  <div class="labeled">
+    <label for="chkDemo1" class="label label_before">Label before</label>
+    <input type="checkbox" id="chkDemo1" class="checkbox" />
+  </div>
+
+  <div class="row row_vcenter">
+    <div class="col col_33">
+      <label for="txtDemo" class="label col__label label_before">Input with Label:</label>
+    </div>
+    <div class="col col_66">
+      <input type="text" class="textbox col__input" id="txtDemo" size="16" placeholder="Type something..." />
+    </div>
   </div>
 
   <select class="select" title="Select">

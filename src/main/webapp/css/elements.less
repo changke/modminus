@@ -12,30 +12,6 @@
   }
 }
 
-// Label with a control
-// basically a "row" in a form
-// mobile view -> label and input stacked (excl. checkbox and radio)
-.labeled {
-  display: flex;
-  flex-direction: column; // label and input stacked
-
-  &_sxs {
-    // special case checkbox and radio, label at side
-    flex-direction: row;
-    align-items: center;
-  }
-
-  &__label {
-    flex: 1;
-    box-sizing: border-box;
-    color: @dark-gray;
-  }
-
-  &__input {
-    flex: 1;
-  }
-}
-
 // Button
 // default height: 36px
 // e.g.: <elem class="button button-modifier" ... ><span class="button__text">Button Text</span></elem>
@@ -91,6 +67,11 @@
 
 // Radio & checkbox (with label)
 // e.g.: <input type="checkbox" class="checkbox" id="x" ... /><label for="x" class="label label_after">Label</label>
+.labeled {
+  display: flex;
+  align-items: center;
+}
+
 .radio,
 .checkbox {}
 
@@ -99,7 +80,10 @@
   font-size: 1.2rem;
   line-height: 2.2rem;
 
-  &_before {}
+  &_before {
+    text-align: left;
+    padding-right: (@gap / 2);
+  }
 
   &_after {
     text-align: left;
@@ -142,25 +126,8 @@
 
 
 @media @tablet {
-  // label and input are placed side by side (excl. checkbox and radio) with 1:2 width ratio
-  .labeled {
-    flex-direction: row;
-    align-items: center;
-
-    &_atop {
-      align-items: flex-start;
-    }
-
-    &__label {
-      flex: 1;
-    }
-
-    &__input {
-      flex: 2; // width ratio label:input = 1:2
-    }
-  }
-
   .label {
+    display: inline-block;
     font-size: 1.4rem;
     line-height: 2.4rem;
 

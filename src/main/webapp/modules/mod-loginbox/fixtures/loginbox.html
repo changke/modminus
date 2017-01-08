@@ -1,12 +1,20 @@
 <div class="mod-loginbox loginbox formbox">
   <form class="loginbox__form">
-    <div class="labeled formbox__row">
-      <label for="txtUsername" class="label labeled__label label_before">Username:</label>
-      <input type="text" class="textbox labeled__input" id="txtUsername" size="16" maxlength="16" />
+    <div class="row row_vcenter formbox__row">
+      <div class="col col_33">
+        <label for="txtUsername" class="label col__label label_before">Email:</label>
+      </div>
+      <div class="col col_66">
+        <input type="text" class="textbox col__input" id="txtUsername" size="16" maxlength="16" />
+      </div>
     </div>
-    <div class="labeled formbox__row">
-      <label for="txtPassword" class="label labeled__label label_before">Password:</label>
-      <input type="password" class="textbox labeled__input" id="txtPassword" size="16" maxlength="32" />
+    <div class="row row_vcenter formbox__row">
+      <div class="col col_33">
+        <label for="txtPassword" class="label col__label label_before">Password:</label>
+      </div>
+      <div class="col col_66">
+        <input type="password" class="textbox col__input" id="txtPassword" size="16" maxlength="32" />
+      </div>
     </div>
     <div class="formbox__row formbox__row_alt">
       <button type="submit" class="button"><span class="button__text">Login</span></button>

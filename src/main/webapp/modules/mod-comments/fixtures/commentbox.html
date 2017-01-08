@@ -1,16 +1,28 @@
 <div class="mod-commentbox commentbox formbox">
   <form class="commentbox__form">
-    <div class="labeled formbox__row">
-      <label class="label labeled__label label_before" for="txtName">Name:</label>
-      <input type="text" class="textbox labeled__input" id="txtName" required="required" />
+    <div class="row row_vcenter formbox__row">
+      <div class="col col_33">
+        <label class="label col__label label_before" for="txtName">Name:</label>
+      </div>
+      <div class="col col_66">
+        <input type="text" class="textbox col__input" id="txtName" required="required" />
+      </div>
     </div>
-    <div class="labeled formbox__row">
-      <label class="label labeled__label label_before" for="txtEmail">Email:</label>
-      <input type="email" class="textbox labeled__input" id="txtEmail" />
+    <div class="row row_vcenter formbox__row">
+      <div class="col col_33">
+        <label class="label col__label label_before" for="txtEmail">Email:</label>
+      </div>
+      <div class="col col_66">
+        <input type="email" class="textbox col__input" id="txtEmail" />
+      </div>
     </div>
-    <div class="labeled labeled_atop formbox__row">
-      <label class="label labeled__label label_before" for="txtComment">Comment:</label>
-      <textarea class="textbox labeled__input" rows="10" id="txtComment"></textarea>
+    <div class="row row_vcenter formbox__row">
+      <div class="col col_33">
+        <label class="label col__label label_before" for="txtComment">Comment:</label>
+      </div>
+      <div class="col col_66">
+        <textarea class="textbox col__input" rows="10" id="txtComment"></textarea>
+      </div>
     </div>
     <div class="formbox__row formbox__row_alt">
       <button class="button" type="submit"><span class="button__text">Submit</span></button>

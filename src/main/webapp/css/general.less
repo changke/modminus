@@ -17,11 +17,26 @@ body {
 
 // Grid
 .row {
-  padding: 0 (@gap / 2);
+  padding: 0;
+  margin: 0;
 
-  &__col {
+  &_gap {
+    padding: 0 (@gap / 2);
+  }
+
+  .col {
     box-sizing: border-box;
-    padding: (@gap / 2);
+    padding: 0;
+
+    &_gap {
+      padding: (@gap / 2);
+    }
+
+    &__label,
+    &__input {
+      box-sizing: border-box;
+      width: 100%;
+    }
   }
 }
 
@@ -42,8 +57,14 @@ p {
 
   .row {
     display: flex;
+    align-items: flex-start;
 
-    &__col {
+    &_vcenter {
+      align-items: center;
+    }
+
+    .col {
+      &_100,
       &_50,
       &_33,
       &_25 {
