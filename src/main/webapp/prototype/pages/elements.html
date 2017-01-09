@@ -5,6 +5,12 @@
 }
 
 <style type="text/css">
+  .sg .sg-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+  }
+
   .sg fieldset {
     border: 1px solid #ccc;
     margin: 0 0 10px;
@@ -22,36 +28,71 @@
     color: #fff;
   }
 
-  .sg .col .demo {
+  .sg .grid-wrapper_gap {
+    background-color: #666;
+  }
+
+  .sg .row_gap {
+    background-color: #999;
+  }
+
+  .sg .row .col_gap {
+    background-color: #ccc;
+  }
+
+  .sg .col .gd {
     margin-bottom: 0;
-    background-color: #ededed;
+    background-color: #fff;
+  }
+
+  .sg .docu {
+    font-size: 12px;
+    line-height: 22px;
+    color: #666;
+    padding: 0 5px;
+    margin-bottom: 22px;
   }
 </style>
 
-<h1>Elements (Style Guide)</h1>
+<h1 class="sg-title">Elements aka Style Guide</h1>
 
 <fieldset>
   <legend>Grid</legend>
-  <div class="row row_gap">
-    <div class="col col_gap col_50"><p class="demo">1/2</p></div>
-    <div class="col col_gap col_50"><p class="demo">1/2</p></div>
-  </div>
-  <div class="row row_gap">
-    <div class="col col_gap col_66"><p class="demo">2/3</p></div>
-    <div class="col col_gap col_33"><p class="demo">1/3</p></div>
-  </div>
-  <div class="row row_gap">
-    <div class="col col_gap col_75"><p class="demo">3/4</p></div>
-    <div class="col col_gap col_25"><p class="demo">1/4</p></div>
+  <p class="docu">Flexbox-based simple grids with 1:1, 2:1 and 3:1 ratios.</p>
+  <div class="grid-wrapper grid-wrapper_gap">
+    <div class="row row_gap">
+      <div class="col col_gap col_50"><p class="gd">1/2</p></div>
+      <div class="col col_gap col_50"><p class="gd">1/2</p></div>
+    </div>
+    <div class="row row_gap">
+      <div class="col col_gap col_66"><p class="gd">2/3</p></div>
+      <div class="col col_gap col_33"><p class="gd">1/3</p></div>
+    </div>
+    <div class="row row_gap">
+      <div class="col col_gap col_75"><p class="gd">3/4</p></div>
+      <div class="col col_gap col_25"><p class="gd">1/4</p></div>
+    </div>
   </div>
 </fieldset>
 
 <fieldset>
+  <legend>Typography</legend>
+  <p class="docu">Open Sans webfont from Google.</p>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit perferendis possimus rerum veniam. Delectus ducimus ea et labore nemo neque odio placeat quaerat? Alias distinctio necessitatibus nulla sunt veritatis.</p>
+  <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox.</p>
+</fieldset>
+
+<fieldset>
   <legend>Button(s)</legend>
-  <button class="button"><span class="button__text">Default Button</span></button>
-  <button disabled="disabled" class="button button_disabled"><span class="button__text">Disabled Button</span></button>
-  <button class="button button_small"><span class="button__text">Small Button</span></button>
-  <button class="button button_large"><span class="button__text">Large Button</span></button>
+  <button class="button"><span class="button__text">Default</span></button>
+  <button disabled="disabled" class="button button_disabled"><span class="button__text">Disabled</span></button>
+  <button class="button button_primary"><span class="button__text">Primary</span></button>
 </fieldset>
 
 <fieldset>

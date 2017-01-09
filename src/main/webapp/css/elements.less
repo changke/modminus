@@ -18,9 +18,9 @@
 .button {
   display: inline-block;
   padding: (@gap / 2) (@gap * 2);
-  background-color: @medium-blue;
-  color: @white;
-  border: 1px solid @medium-blue;
+  background-color: @light-gray;
+  color: @black;
+  border: 1px solid @medium-gray;
   cursor: pointer;
   font-size: 1.4rem;
   line-height: 2.4rem;
@@ -33,7 +33,9 @@
   }
 
   &_disabled {
+    background-color: @white;
     color: @medium-gray;
+    cursor: not-allowed;
   }
 
   &_small {
@@ -46,6 +48,11 @@
     font-size: 1.8rem;
     line-height: 2.8rem;
   }
+
+  &_primary {
+    background-color: @color-primary-0;
+    color: @white;
+  }
 }
 
 // Text input
@@ -55,7 +62,7 @@
   display: inline-block;
   padding: (@gap / 2) @gap;
   background-color: @white;
-  border: 1px solid @medium-blue;
+  border: 1px solid @medium-gray;
   font-family: @sans-serif-fonts;
   font-size: 1.4rem;
   line-height: 2.4rem; // to get 36px height

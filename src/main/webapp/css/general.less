@@ -16,6 +16,12 @@ body {
 }
 
 // Grid
+.grid-wrapper {
+  &_gap {
+    padding: (@gap / 2) 0;
+  }
+}
+
 .row {
   padding: 0;
   margin: 0;
@@ -41,6 +47,41 @@ body {
 }
 
 // Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 2.6rem; // size + 10
+}
+h5 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+h4 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+h3 {
+  font-size: 2.8rem;
+  line-height: 4.8rem; // size + 20
+}
+h2 {
+  font-size: 3.2rem;
+  line-height: 5.2rem;
+}
+h1 {
+  font-size: 3.6rem;
+  line-height: 5.6rem;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 2.4rem;
