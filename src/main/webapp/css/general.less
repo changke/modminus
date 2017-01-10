@@ -82,10 +82,52 @@ h1 {
   line-height: 5.6rem;
 }
 
+// helper mixin to generate Font-size + Margin(-bottom) + Line-height combination
+.fml(@font-size) {
+  font-size: @font-size;
+  line-height: (@font-size + @gap);
+  margin: 0 0 (@font-size + @gap);
+}
+
 p {
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  margin: 0 0 2.4rem;
+  .fml(1.4rem);
+}
+
+ul,
+ol {
+  .fml(1.4rem);
+  padding: 0 0 0 2.4rem;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+
+  ul,
+  ol {
+    margin: 0;
+  }
+}
+
+dl {
+  .fml(1.4rem);
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 0 0 2.4rem;
+}
+
+pre {
+  margin: 0 0 2rem;
+}
+
+code {
+  font-family: @mono-fonts;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 0;
 }
 
 

@@ -86,6 +86,39 @@
   <h6>Heading 6</h6>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fugit perferendis possimus rerum veniam. Delectus ducimus ea et labore nemo neque odio placeat quaerat? Alias distinctio necessitatibus nulla sunt veritatis.</p>
   <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox.</p>
+  <ul>
+    <li>Unordered list item 1</li>
+    <li>
+      Unordered list item 2
+      <ul>
+        <li>Nested item 1</li>
+        <li>Nested item 2</li>
+      </ul>
+    </li>
+    <li>Unordered list item 3</li>
+  </ul>
+  <ol>
+    <li>Unordered list item 1</li>
+    <li>
+      Unordered list item 2
+      <ol>
+        <li>Nested item 1</li>
+        <li>Nested item 2</li>
+      </ol>
+    </li>
+    <li>Unordered list item 3</li>
+  </ol>
+  <dl>
+    <dt>Definition list</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dolorem dolores, excepturi exercitationem fugiat ipsam maxime nesciunt nisi, obcaecati odio qui quibusdam rem repudiandae saepe sed sit totam, ullam unde?</dd>
+  </dl>
+  <pre>
+    <code>
+      var hello = function() {
+        document.write("Hello, world!");
+      };
+    </code>
+  </pre>
 </fieldset>
 
 <fieldset>
@@ -197,4 +230,9 @@
 <fieldset>
   <legend>Teaser</legend>
   {{= it.include("mod-teaser") }}
+</fieldset>
+
+<fieldset>
+  <legend>Breadcrumb</legend>
+  {{= it.include("mod-breadcrumb") }}
 </fieldset>
