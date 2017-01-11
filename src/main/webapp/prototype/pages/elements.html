@@ -28,15 +28,15 @@
     color: #fff;
   }
 
-  .sg .grid-wrapper_gap {
+  .sg .grid-wrapper_gap.gd {
     background-color: #666;
   }
 
-  .sg .row_gap {
+  .sg .row_gap.gd {
     background-color: #999;
   }
 
-  .sg .row .col_gap {
+  .sg .row .col_gap.gd {
     background-color: #ccc;
   }
 
@@ -59,18 +59,18 @@
 <fieldset>
   <legend>Grid</legend>
   <p class="docu">Flexbox-based simple grids with 1:1, 2:1 and 3:1 ratios.</p>
-  <div class="grid-wrapper grid-wrapper_gap">
-    <div class="row row_gap">
-      <div class="col col_gap col_50"><p class="gd">1/2</p></div>
-      <div class="col col_gap col_50"><p class="gd">1/2</p></div>
+  <div class="grid-wrapper grid-wrapper_gap gd">
+    <div class="row row_gap gd">
+      <div class="col col_gap col_50 gd"><p class="gd">1/2</p></div>
+      <div class="col col_gap col_50 gd"><p class="gd">1/2</p></div>
     </div>
-    <div class="row row_gap">
-      <div class="col col_gap col_66"><p class="gd">2/3</p></div>
-      <div class="col col_gap col_33"><p class="gd">1/3</p></div>
+    <div class="row row_gap gd">
+      <div class="col col_gap col_66 gd"><p class="gd">2/3</p></div>
+      <div class="col col_gap col_33 gd"><p class="gd">1/3</p></div>
     </div>
-    <div class="row row_gap">
-      <div class="col col_gap col_75"><p class="gd">3/4</p></div>
-      <div class="col col_gap col_25"><p class="gd">1/4</p></div>
+    <div class="row row_gap gd">
+      <div class="col col_gap col_75 gd"><p class="gd">3/4</p></div>
+      <div class="col col_gap col_25 gd"><p class="gd">1/4</p></div>
     </div>
   </div>
 </fieldset>
@@ -235,4 +235,9 @@
 <fieldset>
   <legend>Breadcrumb</legend>
   {{= it.include("mod-breadcrumb") }}
+</fieldset>
+
+<fieldset>
+  <legend>Tabs</legend>
+  {{= it.include("mod-tabs") }}
 </fieldset>

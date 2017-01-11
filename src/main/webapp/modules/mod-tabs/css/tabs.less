@@ -1,0 +1,56 @@
+.mod-tabs {}
+
+.tabs {
+  &__header {
+    display: flex;
+    background-color: @dark-blue;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__tab {
+    background-color: @medium-blue;
+    color: @white;
+    display: flex;
+    margin: 0 0 0 @gap;
+    list-style: none;
+
+    &_active {
+      background-color: @white;
+      color: @medium-blue;
+    }
+
+    &_logout {
+      flex: 1;
+      background-color: transparent;
+      justify-content: flex-end;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: @white;
+    padding: (@gap / 2);
+
+    &_active {
+      color: @medium-blue;
+    }
+  }
+
+  &__text {
+    display: none;
+  }
+}
+
+@media @tablet {
+  .tabs {
+    &__text {
+      display: inline-block;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      padding: 0 (@gap / 2);
+    }
+  }
+}
