@@ -25,11 +25,9 @@ module.exports = function(grunt) {
     return [
       webPath.css + 'vendor/normalize.less',
       webPath.css + 'vendor/h5bp-top.less',
-      webPath.css + 'vendor/lesshat-prefixed.less',
       webPath.css + 'vars.less',
       webPath.css + 'brands/' + brandName + '.less',
       webPath.css + 'mixins.less',
-      webPath.css + 'webfonts/icons.less',
       webPath.css + 'general.less',
       webPath.css + 'elements.less',
       webPath.modules + '**/css/*.less',
