@@ -33,9 +33,16 @@
     text-decoration: none;
     color: @white;
     padding: (@gap / 2);
+    position: relative;
 
     &_active {
       color: @medium-blue;
+    }
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
     }
   }
 
@@ -51,6 +58,14 @@
       font-size: 1.4rem;
       line-height: 2.4rem;
       padding: 0 (@gap / 2);
+    }
+
+    &__link {
+      .badge {
+        position: static;
+        top: auto;
+        right: auto;
+      }
     }
   }
 }
