@@ -7,12 +7,13 @@
     display: flex;
     justify-content: center;
     background-color: @white;
+    flex-wrap: wrap;
   }
 
   &__item {
     list-style: none;
     padding: (@gap / 2) @gap;
-    margin: 0 (@gap / 2);
+    margin: 0 (@gap / 2) @gap;
     border: 1px solid @medium-blue;
     background-color: @light-blue;
     color: @dark-blue;
@@ -20,6 +21,7 @@
 
     &_num {
       min-width: 3.6rem;
+      display: none;
     }
 
     &_active {
@@ -46,5 +48,15 @@
     display: inline-block;
     font-size: 1.4rem;
     line-height: 2.4rem;
+  }
+}
+
+@media @tablet {
+  .pager {
+    &__item {
+      &_num {
+        display: inline-block;
+      }
+    }
   }
 }
