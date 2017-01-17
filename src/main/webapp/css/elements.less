@@ -149,6 +149,22 @@
   }
 }
 
+//// 4. Colors
+.gen-color(@n, @i: 0) when (@i < @n) {
+  .color-prim-@{i} {
+    @cp: 'color-primary-@{i}';
+    background-color: @@cp;
+  }
+  .color-comp-@{i} {
+    @cc: 'color-complement-@{i}';
+    background-color: @@cc;
+  }
+  .gen-color(@n, (@i + 1));
+}
+
+.gen-color(5);
+
+
 
 @media @tablet {
   .label {
@@ -162,3 +178,4 @@
     }
   }
 }
+
