@@ -1,0 +1,33 @@
+.tags {
+  margin: 0 0 @gap;
+
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0 (@gap / 2) 0 0;
+    list-style: none;
+    line-height: 0;
+
+    &_label {
+      color: @color-complement-3;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0 (@gap / 2);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    background-color: @color-complement-4;
+    color: @white;
+    border-radius: 2px;
+    text-decoration: none;
+  }
+}
