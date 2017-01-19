@@ -22,14 +22,13 @@
   color: @black;
   border: 1px solid @dark-gray;
   cursor: pointer;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  font-weight: bold;
-  font-family: @sans-serif-fonts;
-  text-align: center;
 
   &__text {
     display: inline-block;
+    font-family: @sans-serif-fonts;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: bold;
   }
 
   &_disabled {
@@ -52,6 +51,23 @@
   &_primary {
     background-color: @color-primary-0;
     color: @white;
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    padding: (@gap / 2);
+    border-color: @color-complement-4;
+    background-color: @color-complement-1;
+
+    .button__text {
+      padding-left: (@gap / 2);
+      font-weight: normal;
+    }
+
+    & + & {
+      border-left: 0;
+    }
   }
 }
 

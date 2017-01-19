@@ -95,10 +95,10 @@
   <legend>Colors</legend>
   <div class="sg__colors">
     <div class="sg__color color-prim-0"><span>prim 0</span></div>
-    <div class="sg__color color-prim-1"><span>prim 2</span></div>
-    <div class="sg__color color-prim-2"><span>prim 3</span></div>
-    <div class="sg__color color-prim-3"><span>prim 4</span></div>
-    <div class="sg__color color-prim-4"><span>prim 5</span></div>
+    <div class="sg__color color-prim-1"><span>prim 1</span></div>
+    <div class="sg__color color-prim-2"><span>prim 2</span></div>
+    <div class="sg__color color-prim-3"><span>prim 3</span></div>
+    <div class="sg__color color-prim-4"><span>prim 4</span></div>
   </div>
   <div class="sg__colors">
     <div class="sg__color color-comp-0"><span>comp 0</span></div>
@@ -160,6 +160,8 @@
   <button class="button"><span class="button__text">Default</span></button>
   <button disabled="disabled" class="button button_disabled"><span class="button__text">Disabled</span></button>
   <button class="button button_primary"><span class="button__text">Primary</span></button>
+  <br /><br />
+  {{= it.include("mod-btngroup") }}
 </fieldset>
 
 <fieldset>
@@ -200,7 +202,7 @@
       <option value="23">Option 2.3</option>
     </optgroup>
   </select>
-  <br />
+  <br /><br />
   <input type="text" list="lstTags" class="textbox" title="Tags" />
   <datalist id="lstTags">
     <option value="Firefox">Firefox</option>
@@ -297,4 +299,9 @@
 <fieldset>
   <legend>Tags</legend>
   {{= it.include("mod-tags") }}
+</fieldset>
+
+<fieldset>
+  <legend>Side (Vertical) Navigation</legend>
+  {{= it.include("mod-sidenav") }}
 </fieldset>
