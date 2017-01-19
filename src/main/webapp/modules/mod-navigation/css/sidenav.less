@@ -21,6 +21,14 @@
     font-weight: bold;
   }
 
+  &__subwrapper {
+    display: none;
+
+    &_open {
+      display: block;
+    }
+  }
+
   &__sublink {
     display: flex;
     padding: (@gap / 2) @gap;
@@ -30,5 +38,10 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
     color: @color-primary-3;
+
+    &_active {
+      background-color: @color-complement-3;
+      color: @white;
+    }
   }
 }
