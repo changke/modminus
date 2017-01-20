@@ -1,0 +1,36 @@
+.entrylist {
+  margin: 0 0 @gap;
+  padding: 0;
+
+  &__item {
+    list-style: none;
+    border-bottom: 1px solid @color-primary-1;
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: (@gap / 2) 0;
+  }
+
+  &__icon {
+    width: 2.4rem;
+    margin-right: @gap;
+    color: @color-complement-0;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: @color-primary-4;
+    flex: 1;
+  }
+
+  &__pubdate {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    color: @medium-gray;
+  }
+}
