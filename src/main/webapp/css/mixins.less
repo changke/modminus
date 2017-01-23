@@ -8,3 +8,21 @@
     clear: both;
   }
 }
+
+// helper mixin to generate Font-size + Margin(-bottom) + Line-height combination
+.fml(@font-size) {
+  font-size: @font-size;
+  line-height: (@font-size + @gap);
+  margin: 0 0 (@font-size + @gap);
+}
+
+// styles for entry / comment content where ubb code can be used
+.ubb(@font-size) {
+  > p {
+    .fml(@font-size);
+  }
+  > figure {
+    margin: 0 0 @gap;
+    display: inline-block;
+  }
+}
