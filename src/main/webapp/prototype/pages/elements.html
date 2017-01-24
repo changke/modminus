@@ -291,6 +291,8 @@
 
 <fieldset>
   <legend>Comment Entries</legend>
+  {{= it.include("mod-commentbubble") }}
+  <br /><br />
   {{= it.include("mod-comment") }}
   {{= it.include("mod-comment", {"id": "456"}) }}
   {{= it.include("mod-comment", {"id": "789"}) }}

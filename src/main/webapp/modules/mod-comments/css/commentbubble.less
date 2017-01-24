@@ -1,0 +1,30 @@
+.commentbubble {
+  display: inline-block;
+  padding: (@gap / 2) (@gap * 3);
+  border-radius: @gap;
+  background-color: @color-complement-4;
+  text-decoration: none;
+  color: @white;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    border: (@gap / 2) solid @color-complement-4;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    top: 100%;
+    right: @gap;
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}

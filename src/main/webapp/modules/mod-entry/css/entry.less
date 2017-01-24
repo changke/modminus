@@ -10,6 +10,28 @@
   &__content {
     .ubb();
   }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    a {
+      text-decoration: none;
+      color: @color-complement-4;
+      &:hover {
+        color: @white;
+        background-color: @color-complement-4;
+      }
+    }
+  }
+  &__pubtime {
+    color: @medium-gray;
+  }
 }
 
 
