@@ -12,7 +12,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: (@gap / 2) 0;
+    padding: (@gap / 2) @gap;
+
+    &:hover {
+      background-color: @color-complement-1;
+    }
   }
 
   &__icon {
