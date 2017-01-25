@@ -18,9 +18,9 @@
 .button {
   display: inline-block;
   padding: (@gap / 2) (@gap * 2);
-  background-color: @light-gray;
-  color: @black;
-  border: 1px solid @dark-gray;
+  background-color: @medium-gray;
+  color: @white;
+  border: 1px solid @medium-gray;
   text-decoration: none;
   cursor: pointer;
 
@@ -33,7 +33,7 @@
   }
 
   &_disabled {
-    background-color: @white;
+    background-color: @light-gray;
     color: @medium-gray;
     cursor: not-allowed;
   }
@@ -51,6 +51,7 @@
 
   &_primary {
     background-color: @color-primary-0;
+    border-color: @color-primary-0;
     color: @white;
   }
 
@@ -59,16 +60,13 @@
     align-items: center;
     padding: (@gap / 2);
     border-color: @color-complement-4;
-    background-color: @color-complement-1;
-    color: @color-complement-4;
+    background-color: @color-complement-4;
+    color: @white;
+    margin: 0 1px 0 0;
 
     .button__text {
       padding-left: (@gap / 2);
       font-weight: normal;
-    }
-
-    & + & {
-      border-left: 0;
     }
   }
 }
@@ -80,7 +78,7 @@
   display: inline-block;
   padding: (@gap / 2) @gap;
   background-color: @white;
-  border: 1px solid @dark-gray;
+  border: 1px solid @color-primary-1;
   font-family: @sans-serif-fonts;
   font-size: 1.4rem;
   line-height: 2.4rem; // to get 36px height
@@ -196,4 +194,3 @@
     }
   }
 }
-
