@@ -1,0 +1,43 @@
+{namespace mm.templates.inplaceedit}
+
+/**
+ * Item list
+ * @param items Items to be listed (e.g. categories)
+ */
+{template .list}
+  {foreach $item in $items}
+    <div class="ipe__wrapper" data-item="{$item['id']}">
+      <div class="ipe__items">
+        <h4>{$item['title']}</h4>
+        <p>{$item['description']}</p>
+      </div>
+      <div class="ipe__opers btngroup">
+        <a href="#" class="button button_icon" title="Edit" data-action="edit">
+          <i class="material-icons">edit</i>
+        </a>
+        <a href="#" class="button button_icon" title="Delete" data-action="delete">
+          <i class="material-icons">delete</i>
+        </a>
+      </div>
+    </div>
+  {/foreach}
+{/template}
+
+/**
+ * Editing mask
+ * @param item The item to be edited
+ */
+{template .editingMask}
+  <div class="ipe__items">
+    <input name="txtCateTitle" placeholder="Title of the category" value="{$item['title']}" class="textbox ipe__input" />
+    <input name="txtCateDesc" placeholder="Short description of the category" value="{$item['description']}" class="textbox ipe__input" />
+  </div>
+  <div class="ipe__opers btngroup">
+    <a href="#" class="button button_icon" title="Done" data-action="done">
+      <i class="material-icons">done</i>
+    </a>
+    <a href="#" class="button button_icon" title="Cancel" data-action="cancel">
+      <i class="material-icons">cancel</i>
+    </a>
+  </div>
+{/template}
