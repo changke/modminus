@@ -15,6 +15,12 @@ goog.require('mm.module');
 mm.modules.ipe = function(ctx, id, pubsub, params) {
   goog.base(this, ctx, id, pubsub, params);
   this.name = 'ipe';
+
+  this.itemSelector = '[data-item]';
+  this.editButtonSelector = '[data-action="edit"]';
+  this.doneButtonSelector = '[data-action="done"]';
+  this.cancelButtonSelector = '[data-action="cancel"]';
+  this.deleteButtonSelector = '[data-action="delete"]';
 };
 goog.inherits(mm.modules.ipe, mm.module);
 goog.exportSymbol('mm.modules.ipe', mm.modules.ipe);
@@ -27,7 +33,14 @@ mm.modules.ipe.prototype.run = function() {
   });
 };
 
-mm.modules.ipe.prototype.listItems = function(items) {
-  var itemsHtml = mm.templates.inplaceedit.list({items: items}).content;
+mm.modules.ipe.prototype.listItems = function(itemsData) {
+  // show items
+  var itemsHtml = mm.templates.inplaceedit.list({items: itemsData}).content;
   this.ctx.empty().append(G(itemsHtml));
+
+  // set edit/delete button events
+  var items = this.ctx.find(this.itemSelector);
+  if (items.length > 0 && items.length === itemsData.length) {
+    for (var i = 0; i < items.length; i++) {}
+  }
 };
