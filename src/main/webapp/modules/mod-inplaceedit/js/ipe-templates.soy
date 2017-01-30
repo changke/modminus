@@ -12,10 +12,10 @@
         <p>{$item['description']}</p>
       </div>
       <div class="ipe__opers btngroup">
-        <a href="#" class="button button_icon" title="Edit" data-action="edit">
+        <a href="#" class="button button_icon" title="Edit" data-action="edit" rel="{$item['id']}">
           <i class="material-icons">edit</i>
         </a>
-        <a href="#" class="button button_icon" title="Delete" data-action="delete">
+        <a href="#" class="button button_icon" title="Delete" data-action="delete" rel="{$item['id']}">
           <i class="material-icons">delete</i>
         </a>
       </div>
@@ -29,14 +29,14 @@
  */
 {template .editingMask}
   <div class="ipe__items">
-    <input name="txtCateTitle" placeholder="Title of the category" value="{$item['title']}" class="textbox ipe__input" />
-    <input name="txtCateDesc" placeholder="Short description of the category" value="{$item['description']}" class="textbox ipe__input" />
+    <input name="txtCateTitle" placeholder="Title of the category" value="{$item.title}" class="textbox ipe__input" />
+    <input name="txtCateDesc" placeholder="Short description of the category" value="{$item.description}" class="textbox ipe__input" />
   </div>
   <div class="ipe__opers btngroup">
-    <a href="#" class="button button_icon" title="Done" data-action="done">
+    <a href="#" class="button button_icon" title="Done" data-action="done" rel="{$item.id}">
       <i class="material-icons">done</i>
     </a>
-    <a href="#" class="button button_icon" title="Cancel" data-action="cancel">
+    <a href="#" class="button button_icon" title="Cancel" data-action="cancel" rel="{$item.id}">
       <i class="material-icons">cancel</i>
     </a>
   </div>
