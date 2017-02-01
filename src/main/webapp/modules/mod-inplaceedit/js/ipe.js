@@ -26,6 +26,10 @@ goog.inherits(mm.modules.ipe, mm.module);
 goog.exportSymbol('mm.modules.ipe', mm.modules.ipe);
 
 mm.modules.ipe.prototype.run = function() {
+  this.retrieveItems();
+};
+
+mm.modules.ipe.prototype.retrieveItems = function() {
   var self = this;
 
   this.getJSON('/assets/inplaceedit/example.json', {}, function(res) {
@@ -50,12 +54,12 @@ mm.modules.ipe.prototype.listItems = function(itemsData) {
   }
 };
 
-mm.modules.ipe.prototype.applyEvent = function(elems, eventName) {
+mm.modules.ipe.prototype.applyEvent = function(btns, eventName) {
   var self = this;
 
   switch (eventName) {
     case 'delete':
-      elems.on('click', function(e) {
+      btns.on('click', function(e) {
         e.preventDefault();
         var btn = e.currentTarget;
         var itemId = btn.getAttribute('rel');
@@ -63,7 +67,7 @@ mm.modules.ipe.prototype.applyEvent = function(elems, eventName) {
       });
       break;
     case 'edit':
-      elems.on('click', function(e) {
+      btns.on('click', function(e) {
         e.preventDefault();
         var btn = e.currentTarget;
         var itemRow = btn.parentNode.parentNode;
@@ -76,7 +80,7 @@ mm.modules.ipe.prototype.applyEvent = function(elems, eventName) {
       });
       break;
     case 'done':
-      elems.on('click', function(e) {
+      btns.on('click', function(e) {
         e.preventDefault();
         var btn = e.currentTarget;
         var itemRow = btn.parentNode.parentNode;
@@ -100,18 +104,33 @@ mm.modules.ipe.prototype.deleteItem = function(itemId) {
 };
 
 mm.modules.ipe.prototype.updateItem = function(newItem) {
+  // do update
   this.log(JSON.stringify(newItem));
+
+  // fresh retrieve
+  this.retrieveItems();
 };
 
 mm.modules.ipe.prototype.applyEditingMask = function(row, item) {
+  var self = this;
+
   var rowHtml = mm.templates.inplaceedit.editingMask({item: item}).content;
   var oldHtml = row.innerHTML;
 
   // show edit mask
   row.innerHTML = rowHtml;
 
-  var doneBtn = row.querySelector(this.doneButtonSelector);
-  this.applyEvent(G(doneBtn), 'done');
+  var gRow = G(row);
+  var doneBtn = gRow.find(this.doneButtonSelector);
+  this.applyEvent(doneBtn, 'done');
 
-  var cancelBtn = row.querySelector(this.cancelButtonSelector);
+  var cancelBtn = gRow.find(this.cancelButtonSelector);
+  cancelBtn.on('click', function(e) {
+    e.preventDefault();
+    // restore old dom and re-apply event
+    row.innerHTML = oldHtml;
+    self.applyEvent(gRow.find(self.editButtonSelector), 'edit');
+    self.applyEvent(gRow.find(self.deleteButtonSelector), 'delete');
+    self.log('Editing cancelled.');
+  });
 };

@@ -32,7 +32,7 @@ mm.module = function(ctx, id, pubsub, params) {
 
 mm.module.prototype.start = function() {
   if (typeof this.run === 'function') {
-    this.logger = goog.log.Logger.getLogger(this.name);
+    this.logger = goog.log.Logger.getLogger(this.name + ':' + this.id);
     this.run();
   }
 };
