@@ -1,0 +1,24 @@
+.messagebar {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    background-color: @color-complement-3;
+  }
+
+  &__text {
+    flex: 1;
+    padding: (@gap / 2) @gap;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: @white;
+  }
+
+  &__close {
+    text-decoration: none;
+    display: inline-block;
+    color: @white;
+    padding: 0 (@gap / 2) 0 0;
+    line-height: 0;
+  }
+}
