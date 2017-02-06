@@ -1,0 +1,33 @@
+.dialogbox {
+  box-shadow: 0 0 @gap rgba(0,0,0,0.5);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: (@gap / 2) (@gap / 2) (@gap / 2) @gap;
+    background-color: @dark-gray;
+  }
+  &__title {
+    padding: 0 @gap 0 0;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: @white;
+    font-weight: bold;
+    flex: 1;
+  }
+  &__close {
+    line-height: 0;
+    text-decoration: none;
+    display: inline-block;
+    color: @white;
+  }
+
+  &__body {
+    padding: @gap;
+  }
+
+  &__footer {
+    padding: 0 @gap @gap;
+    text-align: right;
+  }
+}
